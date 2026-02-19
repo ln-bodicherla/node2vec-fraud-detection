@@ -1,0 +1,51 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data
+data/
+*.csv
+*.parquet
+
+# Model artifacts
+models/
+*.pkl
+*.joblib
+*.model
+embeddings/
+
+# Word2Vec / Gensim models
+*.w2v
+*.wv
+
+# Plots
+plots/
+figures/
+*.png
+*.jpg
+*.svg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

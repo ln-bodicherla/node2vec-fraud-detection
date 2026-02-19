@@ -1,0 +1,10 @@
+node2vec>=0.4.6
+networkx>=3.2.0
+pandas>=2.1.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+gensim>=4.3.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+pyyaml>=6.0.1
