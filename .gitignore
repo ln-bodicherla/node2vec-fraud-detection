@@ -1,51 +1,70 @@
+
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-*.egg-info/
-dist/
-build/
-*.egg
+!.env.example
+!.env.sample
+.build/
+.DS_Store
 .eggs/
-
-# Virtual environments
-venv/
-env/
-.venv/
-
-# IDE
-.vscode/
+.env
+.env.*
 .idea/
-*.swp
-*.swo
-*~
-
-# Data
-data/
+.ipynb_checkpoints/
+.swiftpm/
+.venv/
+.vscode/
+*.app
 *.csv
-*.parquet
-
-# Model artifacts
-models/
-*.pkl
+*.db
+*.db-shm
+*.db-wal
+*.egg
+*.egg-info/
+*.ipa
 *.joblib
+*.jpg
+*.key
 *.model
-embeddings/
-
-# Word2Vec / Gensim models
+*.parquet
+*.pem
+*.pkl
+*.png
+*.py[cod]
+*.pyc
+*.secret
+*.so
+*.sqlite
+*.sqlite3
+*.svg
+*.swo
+*.swp
 *.w2v
 *.wv
-
-# Plots
-plots/
-figures/
-*.png
-*.jpg
-*.svg
-
-# OS
-.DS_Store
-Thumbs.db
-
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*~
+*$py.class
+# Build
+# Data
+# Databases
+# Dependencies
+# IDE
 # Jupyter
-.ipynb_checkpoints/
+# Model artifacts
+# OS
+# Plots
+# Secrets
+# Virtual environments
+# Word2Vec / Gensim models
+build/
+credentials*
+data/
+DerivedData/
+dist/
+embeddings/
+env/
+figures/
+models/
+node_modules/
+plots/
+Thumbs.db
+venv/
