@@ -8,7 +8,7 @@ This project applies Node2Vec to learn low-dimensional representations of nodes 
 
 ## Alternative Approach Note
 
-This is an alternative to the GAT (Graph Attention Network) approach for fraud ring detection. Node2Vec generates static graph embeddings using random walks, which can then feed any traditional ML classifier. GAT was chosen for the primary project because it provides end-to-end learning (jointly optimizing graph representation and classification), handles heterogeneous edge types natively, and achieves better performance on dynamic graphs. However, Node2Vec offers simpler deployment since the embeddings can be precomputed and the classifier is a standard scikit-learn/XGBoost model.
+This is an alternative to the GAT (Graph Attention Network) approach for fraud ring detection. Node2Vec generates static graph embeddings using random walks, which can then feed any traditional ML classifier. GAT was chosen for the primary project because it provides end-to-end learning (jointly optimizing graph representation and classification), and handles heterogeneous edge types natively. However, Node2Vec offers simpler deployment since the embeddings can be precomputed and the classifier is a standard scikit-learn/XGBoost model.
 
 ## Key Features
 
@@ -60,14 +60,11 @@ Key Node2Vec parameters in `configs/config.yaml`:
 | p           | Return parameter (lower = more BFS-like) | 1.0     |
 | q           | In-out parameter (lower = more DFS-like) | 0.5     |
 
-## Results
+## Evaluation
 
-| Model                        | Precision | Recall | F1    | AUC   |
-|-----------------------------|-----------|--------|-------|-------|
-| XGBoost + Node2Vec          | 0.82      | 0.76   | 0.79  | 0.93  |
-| Random Forest + Node2Vec    | 0.78      | 0.74   | 0.76  | 0.91  |
-| XGBoost (tabular only)      | 0.71      | 0.68   | 0.69  | 0.87  |
-| GAT (end-to-end)            | 0.85      | 0.81   | 0.83  | 0.95  |
+Uses a generated synthetic transaction graph for demonstration. No results are published in this repository. Running `python -m src.classifier --config configs/config.yaml` trains the classifier on the synthetic graph and logs precision, recall, F1 and AUC on a held-out split, plus a feature-importance plot.
+
+Note: `FraudClassifier.compare_with_gnn()` falls back to fixed placeholder GNN values when no measured GNN metrics are passed in, so its comparison output is not a real benchmark unless you supply metrics from an actual GAT run.
 
 ## License
 
